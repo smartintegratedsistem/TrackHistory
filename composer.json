@@ -1,0 +1,16 @@
+{
+    "name": "sis/track-history",
+    "description": "Laravel Model Track History",
+    "autoload": {
+        "psr-4": {
+            "Sis\\TrackHistory\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "bhagaskara",
+            "email": "bhagaskaraliancer@gmail.com"
+        }
+    ],
+    "require": {}
+}
