@@ -57,10 +57,8 @@ trait HasTrackHistory
         self::deleting(function ($model) {
             $userId = Auth::id();
             $model->deleted_by = $userId;
-        });
-
-        self::deleted(function ($model) {
-            $model->insertHistory();
+            $model->deleted_at = Carbon::now();
+            $model->save();
         });
 
         self::onBoot();
