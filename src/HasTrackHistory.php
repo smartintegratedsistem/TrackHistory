@@ -82,6 +82,6 @@ trait HasTrackHistory
         $tableName = "_history_" . $this->getTable();
         $columns = "(" . implode(",", array_keys($arrayObj)) . ")";
         $binding = "(:" . implode(",:", array_keys($arrayObj)) . ")";
-        DB::insert("INSERT INTO $tableName $columns VALUES $binding", $arrayObj);
+        DB::connection($this->connection)->insert("INSERT INTO $tableName $columns VALUES $binding", $arrayObj);
     }
 }
